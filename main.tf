@@ -1,5 +1,5 @@
 module "label" {
-  source      = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
+  source      = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.22.1"
   namespace   = var.namespace
   stage       = var.stage
   name        = var.name
@@ -14,7 +14,7 @@ module "label" {
 }
 
 module "role_label" {
-  source      = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
+  source      = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.22.1"
   namespace   = var.namespace
   stage       = var.stage
   name        = var.name
@@ -25,7 +25,7 @@ module "role_label" {
 }
 
 module "logs_label" {
-  source      = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.19.2"
+  source      = "git::https://github.com/cloudposse/terraform-null-label.git?ref=tags/0.22.1"
   namespace   = var.namespace
   stage       = var.stage
   name        = var.name
@@ -157,7 +157,7 @@ resource "aws_security_group_rule" "allow_all_egress" {
 #####################
 
 module "kms_key" {
-  source  = "git::https://github.com/cloudposse/terraform-aws-kms-key.git?ref=tags/0.7.0"
+  source  = "git::https://github.com/cloudposse/terraform-aws-kms-key.git?ref=tags/0.9.0"
   enabled = var.session_logging_enabled && var.session_logging_encryption_enabled && var.session_logging_kms_key_arn == ""
 
   namespace   = var.namespace
